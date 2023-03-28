@@ -23,7 +23,7 @@ spec:
       
 ---
 apiVersion: v1
-kind: Service 
+kind: Service
 metadata:
   name: web-service
 spec:
@@ -32,7 +32,6 @@ spec:
     name: web
     tier: frontend
   ports:
-  - protocal: TCP
-    port: 80
-    targetPort: 80
-
+    - protocol: TCP
+      port: 80
+      targetPort: 80
