@@ -17,7 +17,7 @@ metadata:
 spec:
   containers:
     - name: cart
-      image: avpreddy/cart:v1
+      image: avpreddy/cart:k8
       imagePullPolicy: Always
       envFrom:
       - configMapRef:
