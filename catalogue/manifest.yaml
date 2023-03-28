@@ -4,7 +4,7 @@ kind: ConfigMap
 metadata:
   name: catalogue-config
 data:
-  MONGO_URL: mongodb://mongodb-service:80/catalogue
+  MONGO_URL: "mongodb://mongodb-service:80/catalogue"
 ---
 apiVersion: v1 
 kind: Pod
@@ -18,6 +18,9 @@ spec:
     - name: catalogue
       image: avpreddy/catalogue:k8
       imagePullPolicy: Always
+      envFrom:
+      - configMapRef:
+          name: catalogue-config
       resources:
         requests:
           cpu: "100m"
