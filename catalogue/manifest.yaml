@@ -9,7 +9,7 @@ metadata:
 spec:
   containers:
     - name: catalogue
-      image: avpreddy/catalogue:v1
+      image: avpreddy/catalogue:k8
       imagePullPolicy: Always
       resources:
         requests:
